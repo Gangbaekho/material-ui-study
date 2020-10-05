@@ -11,17 +11,15 @@ import { green, purple } from "@material-ui/core/colors";
 // 직접 만들 수 도 있다 . 하지만 main이라는 property가 포함된 object로 만들어야 한다.
 // 그리고 #가 포함된 핵사코드로 만들어야 한다는 것도 알아야 한다.
 
-const theme = createMuiTheme({
-    palette:{
-        type:'dark'
-    }
-})
+// const theme = createMuiTheme({
+//     palette:{
+//         type:'dark'
+//     }
+// })
 
 ReactDOM.render(
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
-            <App />
-        </ThemeProvider>
+        <App />
     </React.StrictMode>
     , 
     document.getElementById("root"));
