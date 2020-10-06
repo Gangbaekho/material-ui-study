@@ -1,13 +1,12 @@
 import React from 'react';
 import { makeStyles,useTheme } from '@material-ui/core/styles';
 import {Button,Paper} from '@material-ui/core'
-import DarkMode from './DarkMode'
-
+import GridStudy from './Grid'
 const App = () => { 
 
   return (
     <div>
-      <DarkMode/>
+      <GridStudy/>
     </div>
   )
 };
