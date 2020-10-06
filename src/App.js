@@ -1,34 +1,17 @@
 import React from 'react';
-import CardStudy from './CardStudy'
-import {Grid} from '@material-ui/core'
+import Home from './Home'
+import {Route, Switch, Redirect} from 'react-router-dom'
+
+// Redirect는 말 그대로 Redirect를 시켜주는 거다. 코드에 있는 그대로라
+// 뭐 따로 설명할건 없다.
 
 const App = () => { 
 
   return (
-    <Grid container direction="column" spacing={2}>  
-      <Grid item container justify="space-evenly">
-          <Grid item xs={2}>
-            <CardStudy/>
-          </Grid>
-          <Grid item xs={2}>
-            <CardStudy/>
-          </Grid>
-          <Grid item xs={2}>
-            <CardStudy/>
-          </Grid>
-      </Grid>
-      <Grid item container justify="space-evenly">
-          <Grid item xs={2}>
-            <CardStudy/>
-          </Grid>
-          <Grid item xs={2}>
-            <CardStudy/>
-          </Grid>
-          <Grid item xs={2}>
-            <CardStudy/>
-          </Grid>
-      </Grid>
-    </Grid>
+    <Switch>
+      <Redirect exact from="/home" to="/home/about"/>
+      <Route exact path="/home/:page?" render={props => <Home {...props} />}/>
+    </Switch>
   )
 };
 
